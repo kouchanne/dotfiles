@@ -1,0 +1,7 @@
+{
+    "editor.minimap.enabled": false,
+    "editor.find.addExtraSpaceOnTop": false,
+    "explorer.confirmDelete": false,
+    "todo-tree.tree.showScanModeButton": false,
+    "editor.tabSize": 2
+}
