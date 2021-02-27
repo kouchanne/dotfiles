@@ -2,6 +2,7 @@ anyenv:
   dir:         '{{ home_path }}/.anyenv'
   plugins_dir: '{{ home_path }}/.anyenv/plugins'
   envs_dir:    '{{ home_path }}/.anyenv/envs'
+  libexec_dir: '{{ home_path }}/.anyenv/libexec'
   
 homebrew:
   taps:
@@ -28,17 +29,12 @@ homebrew:
     - ffmpeg
     - git
     - vim
-    - anyenv
-    - mas
 
 mas:
-  packages:
-    - { id: 409201541, name: Pages }
-    - { id: 409203825, name: Numbers }
-    - { id: 409183694, name: Keynote }
-    - { id: 497799835, name: Xcode }
-    - { id: 803453959, name: Slack }
-    - { id: 441258766, name: Magnet }
+  applications:
+    - '497799835' #Xcode
+    - '803453959' #Slack
+    - '441258766' #Magnet
 
 nodejs:
   versions:
