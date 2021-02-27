@@ -12,12 +12,6 @@
   roles:
     #  basic
     #-----------------------------------------------
-    - role: anyenv
-      tags: ['basic', 'anyenv']
-    - role: link
-      tags: ['basic', 'link']
-    - role: vim
-      tags: ['app', 'vim']
 
     # install 
     #-----------------------------------------------
@@ -26,11 +20,3 @@
 
     # lang
     #-----------------------------------------------
-    - role: ruby
-      tags: ['lang', 'ruby']
-    - role: nodejs
-      tags: ['lang', 'nodejs']
-    - role: python
-      tags: ['lang', 'python']
-    - role: java
-      tags: ['lang', 'java']

@@ -173,12 +173,12 @@ run_provisioning() {
 main() {
   print_header
   check_os
-#   clone_or_update_repo
+  clone_or_update_repo
   check_xcode_license_approved
-#   install_homebrew
-#   brew_tap
-#   install_ansible
-#   run_provisioning
+  install_homebrew
+  brew_tap
+  install_ansible
+  run_provisioning
 }
 
 main

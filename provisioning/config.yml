@@ -20,6 +20,7 @@ homebrew:
     - ffmpeg
     - git
     - vim
+    - anyenv
 
 ruby:
   versions:
@@ -36,9 +37,6 @@ golang:
 python:
   versions:
     - '3.7.0'
-
-  packages:
-    - vim-vint
 
 java:
   versions:

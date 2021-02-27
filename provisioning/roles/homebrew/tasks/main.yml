@@ -4,6 +4,14 @@
 - name: update homebrew
   homebrew:
     update_homebrew: yes
+    
+- name: install homebrew packages
+  homebrew:
+    name:            '{{ item.name | default(item) }}'
+    state:           '{{ item.state | default("present") }}'
+    install_options: '{{ item.install_options | default("") }}'
+  with_items: '{{ homebrew.packages }}'
+  when: homebrew.packages
 
 - name: install cask applications
   homebrew_cask:
@@ -12,11 +20,3 @@
     install_options: '{{ item.install_options | default("") }}'
   with_items: '{{ homebrew.applications }}'
   when: homebrew.applications
-
-- name: install homebrew packages
-  homebrew:
-    name:            '{{ item.name | default(item) }}'
-    state:           '{{ item.state | default("present") }}'
-    install_options: '{{ item.install_options | default("") }}'
-  with_items: '{{ homebrew.packages }}'
-  when: homebrew.packages
