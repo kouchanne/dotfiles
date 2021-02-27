@@ -1,22 +1,33 @@
-- block:
+- set_fact:
+    mas: {}
+    mas_bin: '{{ brew_bin_path }}/mas'
 
-  - name: mas is installed
-    shell: brew list
-    register: mas_brew_list
-    changed_when: False
-    check_mode: no
+- name: install mas
+  homebrew:
+    name:  mas # Mac App Store command line interface
+    state: present
 
-  - block:
+- name: get stat of the binary
+  stat:
+    path: '{{ mas_bin }}'
+  register: mas_bin_stat
+- fail:
+    msg: 'The binary does not exist'
+  when: mas_bin_stat.stat.executable != True
 
-      - name: mas get installed list
-        shell: mas list
-        register: mas_installed_list
-        changed_when: False
-        check_mode: no
+- name: check if logged in
+  command: |
+    {{ mas_bin }} account
+  ignore_errors: yes
+  register: mas_logged_in
 
-      - name: mas install items
-        shell: "mas install {{ item.id }}"
-        when: '"item.id" not in mas_installed_list.stdout'
-        with_items: "{{ mas.packages }}"
+- name: install applications
+  command: |
+    {{ mas_bin }} install {{ item | quote }}
+  with_items: '{{ mas.applications }}'
+  when: mas.applications and mas_logged_in.get('rc') == 0
 
-    when: '"mas" in mas_brew_list.stdout_lines'
+- name: upgrade applications
+  command: |
+    {{ mas_bin }} upgrade
+  when: mas_logged_in.get('rc') == 0
