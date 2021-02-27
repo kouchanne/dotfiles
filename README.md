@@ -1,4 +1,3 @@
 # dotfiles
-## 構成
-* .vimrc vimの設定ファイル
+Respect to cresty(https://github.com/creasty/dotfiles)
 
