@@ -2,26 +2,11 @@
 
 set -u
 
-BASEDIR=$(dirname $0)
-cd $BASEDIR
+IGNORE_PATTERN="^\.(git)"
 
-echo "start dotfiles link..."
-for f in .??*; do
-    [ "$f" = ".git" ] && continue
-    [ "$f" = ".gitconfig.local.template" ] && continue
-    [ "$f" = ".gitmodules" ] && continue
-    [ "$f" = ".DS_Store" ] && continue
-
-    ln -snfv ~/dotfiles/"$f" ~/
-    echo "$f linked"
+echo "Create dotfile links..."
+for dotfile in .??*; do
+    [[ $dotfile =~ $IGNORE_PATTERN ]] && continue
+    ln -snfv "$(pwd)/$dotfile" "$HOME/$dotfile"
 done
-echo "end dotfiles link"
-
-
-cat << END
-
-**************************************************
-DOTFILES SETUP FINISHED! bye.
-**************************************************
-
-END
+echo "Success"
