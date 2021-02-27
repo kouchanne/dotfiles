@@ -2,13 +2,14 @@ anyenv:
   dir:         '{{ home_path }}/.anyenv'
   plugins_dir: '{{ home_path }}/.anyenv/plugins'
   envs_dir:    '{{ home_path }}/.anyenv/envs'
+  
 homebrew:
   taps:
     - homebrew/bundle
     - homebrew/cask
     - homebrew/cask-fonts
     - homebrew/core
-    
+
   applications:
     - adoptopenjdk8
     - adoptopenjdk14
@@ -30,26 +31,19 @@ homebrew:
     - anyenv
     - mas
 
-ruby:
-  versions:
-    - '2.5.1'
+mas:
+  packages:
+    - { id: 409201541, name: Pages }
+    - { id: 409203825, name: Numbers }
+    - { id: 409183694, name: Keynote }
+    - { id: 497799835, name: Xcode }
+    - { id: 803453959, name: Slack }
+    - { id: 441258766, name: Magnet }
 
 nodejs:
   versions:
     - "12.13.0"
 
-golang:
-  versions:
-    - "1.10.0"
-
-python:
-  versions:
-    - '3.7.0'
-
-java:
-  versions:
-    - '1.8'
-    - '14'
 
 link:
   config/.ansible.cfg:        .ansible.cfg
