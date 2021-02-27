@@ -4,6 +4,12 @@
 - name: update homebrew
   homebrew:
     update_homebrew: yes
+
+- name: homebrew taps
+  homebrew_tap:
+    name: "{{ item.name }}"
+    state: present
+  with_items: "{{ homebrew.taps }}"
     
 - name: install homebrew packages
   homebrew:

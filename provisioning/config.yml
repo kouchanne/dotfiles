@@ -3,6 +3,12 @@ anyenv:
   plugins_dir: '{{ home_path }}/.anyenv/plugins'
   envs_dir:    '{{ home_path }}/.anyenv/envs'
 homebrew:
+  taps:
+    - homebrew/bundle
+    - homebrew/cask
+    - homebrew/cask-fonts
+    - homebrew/core
+    
   applications:
     - adoptopenjdk8
     - adoptopenjdk14
@@ -22,6 +28,7 @@ homebrew:
     - git
     - vim
     - anyenv
+    - mas
 
 ruby:
   versions:

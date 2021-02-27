@@ -149,10 +149,6 @@ install_homebrew() {
   echo 'done'
 }
 
-brew_tap() {
-  brew tap AdoptOpenJDK/openjdk
-}
-
 install_ansible() {
   command -v 'ansible' > /dev/null 2>&1 && return
 
@@ -176,7 +172,6 @@ main() {
   clone_or_update_repo
   check_xcode_license_approved
   install_homebrew
-  brew_tap
   install_ansible
   run_provisioning
 }
