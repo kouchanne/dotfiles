@@ -10,3 +10,11 @@ for dotfile in .??*; do
     ln -snfv "$(pwd)/$dotfile" "$HOME/$dotfile"
 done
 echo "Success"
+
+cat << END
+
+**************************************************
+DOTFILES INSTALLED!
+**************************************************
+
+END
