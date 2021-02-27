@@ -13,6 +13,7 @@ homebrew:
     - jetbrains-toolbox
     - karabiner-elements
     - visual-studio-code
+    - google-chrome
 
   packages:
     - docker
