@@ -1,0 +1,56 @@
+anyenv:
+  dir:         '{{ home_path }}/.anyenv'
+  plugins_dir: '{{ home_path }}/.anyenv/plugins'
+  envs_dir:    '{{ home_path }}/.anyenv/envs'
+homebrew:
+  applications:
+    - adoptopenjdk8
+    - adoptopenjdk14
+    - alfred
+    - docker
+    - google-japanese-ime
+    - iterm2
+    - jetbrains-toolbox
+    - karabiner-elements
+    - visual-studio-code
+
+  packages:
+    - docker
+    - fish
+    - ffmpeg
+    - git
+    - vim
+
+ruby:
+  versions:
+    - '2.5.1'
+
+nodejs:
+  versions:
+    - "12.13.0"
+
+golang:
+  versions:
+    - "1.10.0"
+
+python:
+  versions:
+    - '3.7.0'
+
+  packages:
+    - vim-vint
+
+java:
+  versions:
+    - '1.8'
+    - '14'
+
+link:
+  config/.ansible.cfg:        .ansible.cfg
+  git/.gitconfig:             .gitconfig
+  git/.gitignore:             .gitignore
+  vim/.vimrc:                 .vimrc
+  karabiner:                  .config/karabiner
+  iterm2:                     .config/iterm2
+  fish:                       .config/fish
+  omf:                        .config/omf

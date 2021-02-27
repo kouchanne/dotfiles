@@ -1,0 +1,16 @@
+[user]
+	name = kouki
+	email = hinoatarusakamichi@gmail.com
+
+[alias]
+[diff]
+	compactionHeuristic = true
+[core]
+	editor = vim
+	excludesfile = ~/.gitignore
+    autocrlf = false
+[commit]
+[push]
+	default = upstream
+[pull]
+	ff = only
