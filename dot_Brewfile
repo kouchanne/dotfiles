@@ -1,12 +1,5 @@
-# tap
-tap "homebrew/bundle"
-tap "homebrew/cask-fonts"
-tap "homebrew/cask-versions"
-
-
 # formula
 brew "chezmoi"
-brew "ffmpeg"
 brew "fish"
 brew "gh"
 brew "git"
