@@ -1,0 +1,45 @@
+[user]
+	name = Koki Okawa
+	email = hinoatarusakamichi@gmail.com
+
+[github]
+	user = kouchanne
+
+[core]
+	editor = vim
+	excludesfile = ~/.gitignore
+
+[color]
+  ui = true
+
+[alias]
+	s = status -s
+	b = branch
+	ch = checkout
+	c = commit
+	cm = commit -m
+[diff]
+	indentHeuristic = true
+
+[push]
+  default = current
+  autoSetupRemote = true
+  
+[pull]
+  rebase = false
+
+[branch "master"]
+  mergeOptions = --ff-only
+
+[branch "main"]
+  mergeOptions = --ff-only
+[rerere]
+	enabled = true
+[column]
+	ui = auto
+
+[issue]
+  type = github
+
+[web]
+  browser = google-chrome

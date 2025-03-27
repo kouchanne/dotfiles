@@ -1,0 +1,75 @@
+# https://alacritty.org/config-alacritty.html
+
+[colors.primary]
+background = "0x282c34"
+foreground = "0xFFFFFF"
+
+[colors.normal]
+black   = "0x282c34"
+blue    = "0x61afef"
+cyan    = "0x56b6c2"
+green   = "0x98c379"
+magenta = "0xc678dd"
+red     = "0xe06c75"
+white   = "0xabb2bf"
+yellow  = "0xe5c07b"
+
+[colors.bright]
+black   = "0x5c6370"
+blue    = "0x61afef"
+cyan    = "0x56b6c2"
+green   = "0x98c379"
+magenta = "0xc678dd"
+red     = "0xe06c75"
+white   = "0xffffff"
+yellow  = "0xe5c07b"
+
+[colors.dim]
+black   = "0x1e2127"
+blue    = "0x4b5263"
+cyan    = "0x4b5263"
+green   = "0x4b5263"
+magenta = "0x4b5263"
+red     = "0x4b5263"
+white   = "0x4b5263"
+yellow  = "0x4b5263"
+
+
+[font]
+normal.family = "Hack Nerd Font"
+normal.style = "Regular"
+bold.family = "Hack Nerd Font"
+bold.style = "Bold"
+italic.family = "Hack Nerd Font"
+italic.style = "Regular Italic"
+size = 12
+
+
+[font.glyph_offset]
+x = 0
+y = 2
+
+[font.offset]
+x = 0
+y = 3
+
+[window]
+decorations = "full"
+dynamic_padding = false
+startup_mode = "Maximized"
+
+[window.dimensions]
+columns = 0
+lines = 0
+
+[window.padding]
+x = 4
+y = 4
+
+[mouse]
+hide_when_typing = false
+
+[[keyboard.bindings]]
+chars = "\u0011"
+key = "Q"
+mods = "Control"
