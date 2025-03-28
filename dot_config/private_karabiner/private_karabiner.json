@@ -1,5 +1,8 @@
 {
-    "global": { "show_profile_name_in_menu_bar": true },
+    "global": {
+        "ask_for_confirmation_before_quitting": false,
+        "show_in_menu_bar": false
+    },
     "profiles": [
         {
             "complex_modifications": {
@@ -108,6 +111,15 @@
                         "vendor_id": 1452
                     },
                     "ignore": true
+                },
+                {
+                    "identifiers": { "is_keyboard": true },
+                    "simple_modifications": [
+                        {
+                            "from": { "key_code": "caps_lock" },
+                            "to": [{ "key_code": "left_control" }]
+                        }
+                    ]
                 }
             ],
             "name": "US keyboard",
