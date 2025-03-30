@@ -6,6 +6,7 @@ brew "git"
 brew "mas"
 brew "vim"
 brew "volta"
+brew "fzf"
 
 # cask
 cask "alacritty"
