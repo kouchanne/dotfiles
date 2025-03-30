@@ -9,7 +9,6 @@ brew "volta"
 
 # cask
 cask "alacritty"
-cask "alfred"
 cask "ankerwork"
 cask "cursor"
 cask "figma"
