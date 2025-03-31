@@ -10,4 +10,4 @@ set -U FZF_COMPLETE 2
 set -U FZF_COMPLETE 3
 
 # Go
-set -gx GOPATH $HOME/go
+set -gx PATH $HOME/go/bin $PATH
