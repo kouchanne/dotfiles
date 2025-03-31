@@ -11,3 +11,7 @@ set -U FZF_COMPLETE 3
 
 # Go
 set -gx PATH $HOME/go/bin $PATH
+
+# Node.js
+set -gx VOLTA_HOME $HOME/.volta
+set -p PATH $VOLTA_HOME/bin
