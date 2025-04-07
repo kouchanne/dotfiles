@@ -1,3 +1,6 @@
+# tap
+tap "hashicorp/tap"
+
 # formula
 brew "chezmoi"
 brew "fish"
@@ -7,6 +10,7 @@ brew "mas"
 brew "vim"
 brew "volta"
 brew "fzf"
+brew "hashicorp/tap/terraform"
 
 # cask
 cask "alacritty"
