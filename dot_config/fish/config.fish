@@ -10,6 +10,7 @@ set -U FZF_COMPLETE 1
 set -U FZF_COMPLETE 2
 set -U FZF_COMPLETE 3
 set -U GO_TASK_PROGNAME task
+set -x FZF_DEFAULT_COMMAND 'rg --files --hidden --follow --glob "!.git/*"'
 
 # Go
 set -gx PATH $HOME/go/bin $PATH
