@@ -8,6 +8,7 @@ function fish_user_key_bindings
     bind -M insert -e \ce
     bind -M visual -e \ce
     bind -M default -e \ce
+    bind -M insert -e \cf
     bind -M insert \ce accept-autosuggestion
 
     ### fzf ###
