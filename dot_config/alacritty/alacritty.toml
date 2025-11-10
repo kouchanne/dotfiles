@@ -73,3 +73,7 @@ hide_when_typing = false
 chars = "\u0011"
 key = "Q"
 mods = "Control"
+
+[terminal.shell]
+program = "/opt/homebrew/bin/fish"
+args = ["-l", "-c", "zellij attach --index 0 --create"]
