@@ -15,3 +15,15 @@ set -gx PATH $HOME/go/bin $PATH
 # Node.js
 set -gx VOLTA_HOME $HOME/.volta
 set -p PATH $VOLTA_HOME/bin
+
+# docker compose
+if status is-interactive
+    # 基本のエイリアス
+    abbr -a dc 'docker compose'
+
+    # よく使うサブコマンドのエイリアス
+    abbr -a dcu 'docker compose up -d'
+    abbr -a dcd 'docker compose down'
+    abbr -a dcl 'docker compose logs -f'
+    abbr -a dcex 'docker compose exec'
+end
