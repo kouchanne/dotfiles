@@ -1,4 +1,3 @@
-fish_config theme choose "ayu Dark"
 
 # PATH
 set -x PATH /opt/homebrew/bin $PATH
