@@ -15,6 +15,7 @@ brew "zellij"
 brew "gemini-cli"
 brew "mise"
 brew "aws-cli"
+brew "eza"
 
 
 # cask
