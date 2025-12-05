@@ -13,11 +13,13 @@ brew "docker-buildx"
 brew "colima"
 brew "zellij"
 brew "gemini-cli"
+brew "mise"
+brew "aws-cli"
+
 
 # cask
 cask "alacritty"
 cask "ankerwork"
-cask "cursor"
 cask "figma"
 cask "font-hack-nerd-font"
 cask "font-jetbrains-mono"
