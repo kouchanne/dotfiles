@@ -5,9 +5,6 @@ set -x PATH /opt/homebrew/bin $PATH
 
 # fzf
 set -U FZF_LEGACY_KEYBINDINGS 0
-set -U FZF_COMPLETE 0
-set -U FZF_COMPLETE 1
-set -U FZF_COMPLETE 2
 set -U FZF_COMPLETE 3
 set -U GO_TASK_PROGNAME task
 set -x FZF_DEFAULT_COMMAND 'rg --files --hidden --follow --glob "!.git/*"'

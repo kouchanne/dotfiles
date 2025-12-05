@@ -11,6 +11,7 @@ brew "docker"
 brew "docker-compose"
 brew "docker-buildx"
 brew "colima"
+brew "zellij"
 brew "gemini-cli"
 brew "claude-code"
 

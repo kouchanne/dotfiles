@@ -1,0 +1,11 @@
+#!/bin/bash
+
+{{ if eq .chezmoi.os "darwin" }}
+
+# Check if fisher is already installed
+if ! fish -c "type -q fisher" 2>/dev/null; then
+    echo "Installing Fisher..."
+    /bin/bash -c "$(curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher)"
+fi
+
+{{ end }}

@@ -1,0 +1,21 @@
+#!/bin/bash
+
+{{ if eq .chezmoi.os "darwin" }}
+
+# Check if brew already exists
+if ! command -v brew &> /dev/null; then
+    echo "Installing Homebrew..."
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" || {
+        echo "Failed to install Homebrew"
+        exit 1
+    }
+fi
+
+# Run brew bundle with error checking
+if [ -f "$HOME/.Brewfile" ]; then
+    brew bundle --file="$HOME/.Brewfile" || {
+        echo "Warning: Some packages failed to install"
+    }
+fi
+
+{{ end }}
