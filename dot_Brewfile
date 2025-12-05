@@ -13,7 +13,6 @@ brew "docker-buildx"
 brew "colima"
 brew "zellij"
 brew "gemini-cli"
-brew "claude-code"
 
 # cask
 cask "alacritty"
@@ -32,6 +31,12 @@ cask "spotify"
 cask "visual-studio-code"
 cask "messenger"
 cask "slack"
+cask "webstorm"
+cask "goland"
+cask "datagrip"
+cask "cloudflare-warp"
+cask "claude"
+cask "claude-code"
 
 # mas
 mas "LINE", id: 539883307
