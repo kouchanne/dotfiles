@@ -74,6 +74,12 @@ chars = "\u0011"
 key = "Q"
 mods = "Control"
 
+# Claude Code用の追加設定
+[[keyboard.bindings]]
+key = "Return"
+mods = "Shift"
+chars = "\n"
+
 [terminal.shell]
 program = "/opt/homebrew/bin/fish"
 args = ["-l", "-c", "zellij attach --index 0 --create"]
