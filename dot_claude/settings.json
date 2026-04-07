@@ -1,0 +1,37 @@
+{
+  "instructions": "[必須] agentsやcommandにスキルを使用すると記載がある場合は必ずその指定されたスキルを利用すること",
+  "env": {
+    "CLAUDE_BASH_MAINTAIN_PROJECT_WORKING_DIR": "1",
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1",
+    "CLAUDE_CODE_SESSIONEND_HOOKS_TIMEOUT_MS": "30000"
+  },
+  "plansDirectory": "./.claude/plans",
+
+  "enabledPlugins": {
+    "frontend-design@claude-code-plugins": true,
+    "code-review@claude-code-plugins": true
+  },
+  "voiceEnabled": false,
+  "hooks": {
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "~/.claude/scripts/notify.sh",
+            "async": true
+          }
+        ]
+      }
+    ]
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "~/.claude/scripts/statusline.sh"
+  },
+  "fileSuggestion": {
+    "type": "command",
+    "command": "~/.claude/scripts/file-suggestion.sh"
+  }
+}

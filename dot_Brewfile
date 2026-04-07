@@ -16,6 +16,7 @@ brew "gemini-cli"
 brew "mise"
 brew "aws-cli"
 brew "eza"
+brew "ripgrep"
 
 
 # cask
