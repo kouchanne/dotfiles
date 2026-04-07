@@ -1,0 +1,8 @@
+# gitignore されたディレクトリを @ 検索に含める場合はコメントを外す
+# !target/
+# !dist/
+# !build/
+
+# @ 検索から除外するディレクトリ
+node_modules
+.git
