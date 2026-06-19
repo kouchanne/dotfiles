@@ -17,6 +17,8 @@ brew "mise"
 brew "aws-cli"
 brew "eza"
 brew "ripgrep"
+brew "yazi"
+brew "lazygit"
 
 
 # cask
