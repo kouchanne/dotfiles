@@ -69,6 +69,11 @@ y = 4
 [mouse]
 hide_when_typing = false
 
+[selection]
+# マウス選択と同時にシステムクリップボードへコピーする。
+# Shift+ドラッグのときは Alacritty 自身が選択を処理するため、この設定が効く。
+save_to_clipboard = true
+
 [[keyboard.bindings]]
 chars = "\u0011"
 key = "Q"
