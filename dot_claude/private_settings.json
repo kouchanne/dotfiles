@@ -39,7 +39,8 @@
     "frontend-design@claude-code-plugins": true,
     "code-review@claude-code-plugins": true,
     "gopls-lsp@claude-plugins-official": true,
-    "dig@kuu-marketplace": true
+    "dig@kuu-marketplace": true,
+    "mattpocock-skills@claude-plugins-official": true
   },
   "extraKnownMarketplaces": {
     "openai-codex": {
@@ -60,6 +61,7 @@
   "autoMemoryDirectory": "~/.claude/memory",
   "skipWorkflowUsageWarning": true,
   "autoCompactEnabled": true,
+  "agentPushNotifEnabled": true,
   "voiceEnabled": false,
   "instructions": "[必須] agentsやcommandにスキルを使用すると記載がある場合は必ずその指定されたスキルを利用すること"
 }
