@@ -19,6 +19,7 @@ brew "eza"
 brew "ripgrep"
 brew "yazi"
 brew "lazygit"
+brew "vjeantet/tap/alerter"
 
 
 # cask
