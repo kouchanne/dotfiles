@@ -15,7 +15,7 @@
       "Write(~/.claude/memory/MEMORY.md)"
     ]
   },
-  "model": "opus[1m]",
+  "model": "sonnet",
   "enableAllProjectMcpServers": true,
   "hooks": {
     "Stop": [
@@ -58,10 +58,14 @@
   },
   "plansDirectory": "./.claude/plans",
   "tui": "fullscreen",
+  "voice": {
+    "enabled": false,
+    "mode": "hold"
+  },
   "autoMemoryDirectory": "~/.claude/memory",
   "skipWorkflowUsageWarning": true,
   "autoCompactEnabled": true,
-  "agentPushNotifEnabled": true,
+  "switchModelsOnFlag": true,
   "voiceEnabled": false,
   "instructions": "[必須] agentsやcommandにスキルを使用すると記載がある場合は必ずその指定されたスキルを利用すること"
 }
