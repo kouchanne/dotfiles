@@ -11,9 +11,10 @@ set -x FZF_DEFAULT_COMMAND 'rg --files --hidden --follow --glob "!.git/*"'
 # Go
 set -gx PATH $HOME/go/bin $PATH
 
-# Node.js
-set -gx VOLTA_HOME $HOME/.volta
-set -p PATH $VOLTA_HOME/bin
+# mise (version manager)
+if command -q mise
+    mise activate fish | source
+end
 
 # eza (modern replacement of "ls")
 if command -q eza
