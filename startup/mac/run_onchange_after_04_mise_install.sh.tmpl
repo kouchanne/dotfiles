@@ -1,0 +1,23 @@
+#!/bin/bash
+
+{{ if eq .chezmoi.os "darwin" }}
+
+# mise config hash: {{ include "dot_config/mise/config.toml" | sha256sum }}
+# ↑ config.toml が変わるとハッシュが変わり、このスクリプトが再実行される
+
+export PATH="/opt/homebrew/bin:$PATH"
+
+if ! command -v mise &> /dev/null; then
+    echo "mise not found. Skipping (brew bundle で mise を入れてから再実行してください)"
+    exit 0
+fi
+
+# カレントディレクトリのプロジェクト設定を拾わないよう $HOME で実行（グローバル設定のみ対象）
+cd "$HOME" || exit 0
+
+echo "Running mise install..."
+mise install || {
+    echo "Warning: mise install failed"
+}
+
+{{ end }}
