@@ -68,30 +68,19 @@
   "autoMode": {
     "environment": [
       "### Org-wide",
-      "**Organization**: None configured",
-      "**Cloud provider(s)**: None configured",
-      "**Repository visibility**: Public — kouchanne/dotfiles (github.com)",
-      "**Internal sharing / snippet hosting**: None configured — treat public paste/gist services as outside the trust boundary",
-      "**Secrets management**: None configured",
-      "**Default / protected branches**: Default branch master; no branch protection rules or rulesets listed for kouchanne/dotfiles",
-      "**CI/CD deploy targets**: None configured",
-      "**Network posture**: None configured",
-      "**Host containment**: None configured — assume Claude Code runs on an ordinary developer machine or CI runner with open internet",
-      "**Source control**: The trusted repo (kouchanne/dotfiles, public) and its remote origin only — as scoped by Trusted repo and Repository visibility entries above",
-      "**Trusted internal domains**: None configured",
-      "**Trusted cloud buckets**: None configured",
-      "**Key internal services**: None configured",
-      "**Internal package registry**: None configured",
-      "**Sensitive data locations & audiences**: any file or store holding personal data, confidential business data, credentials, regulated data, or similarly sensitive material; preserve exact handles when known and share only with audiences cleared at the [named+specifics] bar",
-      "**Data retention / declassification**: None configured",
-      "**Sensitive remote targets**: any namespace, host, or container whose name carries `prod` or `production` as a whole word or name segment",
-      "**Protected deployment namespaces / environments**: None configured — fall back to the Sensitive remote targets heuristic",
-      "**Protected IaC scopes**: IAM, RBAC, networking, quota, and node-pool resources; anything whose name or tag carries `prod` or `production` as a whole word or name segment",
+      "**Secrets management**: シークレットの値（API キー、パスワード、トークン、認証情報ファイルの中身）を会話・コミット・Issue・ドキュメント・外部サービスへ出力しない",
+      "**Internal sharing / snippet hosting**: 公開の paste / gist サービスは信頼境界の外",
+      "**Source control**: 作業中リポジトリの origin への push・PR 作成は通常作業。他組織・他人のリポジトリへの書き込みは対象外",
+      "**Default / protected branches**: master / main への直接 push は避け、ブランチを切って PR を作る（個人 dotfiles リポジトリは除く）",
+      "**CI/CD deploy targets**: デプロイや環境更新は明示指示がある場合のみ実行する",
+      "**Sensitive data locations & audiences**: 本番データベース、シークレット、個人情報・業務上の機密データ。外部サービスや公開リポジトリへ出さない",
+      "**Sensitive remote targets**: 名前に `prod` / `production` / `prd` を全語または名前セグメントとして含む namespace・host・DB・クラウドプロファイル",
+      "**Protected deployment namespaces / environments**: 本番環境。書き込み系操作（INSERT / UPDATE / DELETE、リソース変更）は明示指示がある場合のみ。DB 接続のデフォルトは reader",
+      "**Protected IaC scopes**: IAM・RBAC・ネットワーク・DB・本番環境のリソース。terraform apply は明示指示がある場合のみ（plan は可）",
       "### User-specific",
-      "**Primary use of Claude Code**: personal dotfiles management (chezmoi-based macOS configuration)",
-      "**Trusted repo**: /Users/koki/.local/share/chezmoi, remote https://github.com/kouchanne/dotfiles.git (public — own work only; no secrets or sensitive data regardless of visibility)",
-      "**Org-specific CLIs**: None configured — chezmoi is this repo's own dotfiles tool, not an org-internal CLI",
-      "routine under /Users/koki/.local/share/chezmoi/ prefix: chezmoi apply/diff/add and standard dotfiles edits"
+      "**Primary use of Claude Code**: ソフトウェア開発全般と、個人の dotfiles（chezmoi）管理。組織固有の情報はこのファイルに書かず、各プロジェクトの .claude/settings.local.json に置く",
+      "**Trusted repo**: 作業ディレクトリのリポジトリとその origin。dotfiles は ~/.local/share/chezmoi（https://github.com/kouchanne/dotfiles.git、public。シークレットや会社に関する情報を含めない）",
+      "**Routine operations**: git の status / diff / log / branch / commit、gh による PR・Issue の参照と作成、terraform plan / fmt / validate、クラウドの read 系コマンド（describe / list / get）、chezmoi apply / diff / add"
     ]
   }
 }
