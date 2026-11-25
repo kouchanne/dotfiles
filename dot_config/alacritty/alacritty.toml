@@ -57,6 +57,8 @@ y = 4
 decorations = "full"
 dynamic_padding = false
 startup_mode = "Maximized"
+# Option を Alt として送る（zellij の Alt 系キー / Session Manager の Alt Enter 用）
+option_as_alt = "Both"
 
 [window.dimensions]
 columns = 0
