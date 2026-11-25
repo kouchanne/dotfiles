@@ -115,14 +115,15 @@ This removes the file from chezmoi management but keeps it in your home director
 Zellij 0.46+ の Attention Inbox で、Claude Code / Codex の状態（作業中・承認待ち・完了・エラー）を全セッション横断で確認できる。
 Claude Code 2.1.295+ / Codex CLI 0.163.0+ は OSC 7501 を自前で出力するため、エージェント側の設定は不要。
 
-キーは unlock-first 運用（`Ctrl g` で解除してから押す）。
+キーは通常モードから押す（デフォルトモードは normal。`Ctrl g` は locked との切り替え）。
 
 | 操作 | キー |
 |---|---|
-| Attention Inbox を開く | `Ctrl g` → `o` → `i` |
-| 次に対応が必要なペインへ移動 | `Ctrl g` → `o` → `n` |
-| Session Manager を開く | `Ctrl g` → `o` → `w` |
-| ペイン名を変更（通知ラベルになる） | `Ctrl g` → `p` → `c` |
+| Attention Inbox を開く | `Ctrl o` → `i` |
+| 次に対応が必要なペインへ移動 | `Ctrl o` → `n` |
+| 現在のセッションの通知をミュート | `Ctrl o` → `u` |
+| Session Manager を開く | `Ctrl o` → `w` |
+| ペイン名を変更（通知ラベルになる） | `Ctrl p` → `c` |
 | プレビュー先へ入力（承認操作など） | `Alt Enter` |
 | 並び替え / 消去 / ミュート（Inbox 内） | `s` / `c` / `m` |
 
