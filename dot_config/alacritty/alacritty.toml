@@ -42,7 +42,7 @@ bold.family = "Hack Nerd Font"
 bold.style = "Bold"
 italic.family = "Hack Nerd Font"
 italic.style = "Regular Italic"
-size = 12
+size = 14
 
 
 [font.glyph_offset]
@@ -51,7 +51,7 @@ y = 2
 
 [font.offset]
 x = 0
-y = 3
+y = 4
 
 [window]
 decorations = "full"
