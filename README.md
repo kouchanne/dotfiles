@@ -110,6 +110,27 @@ This removes the file from chezmoi management but keeps it in your home director
    git push
    ```
 
+## Agent Status (Zellij Attention Inbox)
+
+Zellij 0.46+ の Attention Inbox で、Claude Code / Codex の状態（作業中・承認待ち・完了・エラー）を全セッション横断で確認できる。
+Claude Code 2.1.295+ / Codex CLI 0.163.0+ は OSC 7501 を自前で出力するため、エージェント側の設定は不要。
+
+キーは unlock-first 運用（`Ctrl g` で解除してから押す）。
+
+| 操作 | キー |
+|---|---|
+| Attention Inbox を開く | `Ctrl g` → `o` → `i` |
+| 次に対応が必要なペインへ移動 | `Ctrl g` → `o` → `n` |
+| Session Manager を開く | `Ctrl g` → `o` → `w` |
+| ペイン名を変更（通知ラベルになる） | `Ctrl g` → `p` → `c` |
+| プレビュー先へ入力（承認操作など） | `Alt Enter` |
+| 並び替え / 消去 / ミュート（Inbox 内） | `s` / `c` / `m` |
+
+プレビューからの入力は対象ペインへ実際に送られる。承認する前にセッション名・ペイン名・要求内容を確認すること。
+設定は `dot_config/zellij/config.kdl` の `attention` ブロックと session モードの bind。
+
+状態が出ないときの確認順: zellij が 0.46+ か → エージェントが対応バージョンか → エージェント側で状態通知を無効にしていないか（`CLAUDE_CODE_DISABLE_TERMINAL_TITLE`）→ 未対応アプリは通知/ベル設定。
+
 ## Troubleshooting
 
 ### Terminal fails to start or zellij not found
